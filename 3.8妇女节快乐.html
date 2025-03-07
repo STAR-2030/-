@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3·8 国际妇女节 | 致敬伟大的女性</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .countdown {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #d63384;
+        }
+        .women-icons img {
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+ 
+    <h1>🌸 3·8 国际妇女节 🌸</h1>
+    <div class="countdown" id="countdown">距离妇女节：00天 00小时 00分 00秒</div>
+ 
+    <div class="section">
+        <h2>💖 向伟大的女性致敬</h2>
+        <p>妇女节是一个庆祝女性成就和贡献的日子，我们向所有勇敢、智慧、温柔的女性表达敬意！</p>
+    </div>
+ 
+    <div class="section women-icons">
+        <h2>🌟 女性名人榜</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Marie_Curie_c._1920s.jpg" alt="居里夫人" title="居里夫人">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Mother_Teresa_1.jpg" alt="特蕾莎修女" title="特蕾莎修女">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Yang_Jiang_in_1962.jpg" alt="杨绛" title="杨绛">
+    </div>
+ 
+    <button class="btn" onclick="showBlessing()">🌷 送上祝福</button>
+ 
+    <script>
+        function showBlessing() {
+            alert("愿世界所有女性都被温柔以待，妇女节快乐！🌷");
+        }
+ 
+        function updateCountdown() {
+            const eventDate = new Date("March 8, 2025 00:00:00").getTime();
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+ 
+            let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+ 
+            document.getElementById("countdown").innerHTML = `距离妇女节：${days}天 ${hours}小时 ${minutes}分 ${seconds}秒`;
+        }
+ 
+        setInterval(updateCountdown, 1000);
+    </script>
+ 
+</body>
+</html>
